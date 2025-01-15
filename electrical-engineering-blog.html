@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Engineering at NYUAD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/nyuad-logo.png" alt="NYUAD Engineering Logo" class="logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header class="blog-header">
+        <h1>Electrical Engineering at NYUAD</h1>
+    </header>
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <button onclick="goBack()" class="back-button">← Back</button>
+    </div>
+    
+    <script>
+        function goBack() {
+            // If there's a previous page in the browser history
+            if (document.referrer) {
+                window.location.href = document.referrer; // Go back to the referring page
+            } else {
+                window.location.href = "index.html"; // Default to the homepage
+            }
+        }
+    </script>
+    <main class="blog-content">
+        <p>
+            Electrical Engineering at NYU Abu Dhabi explores the principles of electricity, electronics, and electromagnetism to solve real-world challenges. This program equips students with a solid foundation in areas like power systems, renewable energy, and signal processing, enabling them to tackle the growing demand for innovative technologies.
+        </p>
+        <p>
+            At NYUAD, students engage in hands-on projects ranging from designing smart grids to developing communication technologies. The program encourages creative problem-solving and interdisciplinary collaboration, preparing students for dynamic roles in industries like telecommunications, energy, and robotics.
+        </p>
+        <p>
+            The curriculum blends rigorous coursework with practical applications, ensuring graduates are well-prepared for the challenges of the modern world. With access to cutting-edge labs and industry partnerships, students in Electrical Engineering at NYUAD have the opportunity to make significant contributions to the field.
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 NYUAD Engineering Course Compass. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

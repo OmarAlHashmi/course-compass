@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Engineering Major - Course Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/course_compass.png" alt="NYUAD Engineering Logo" class="logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Electrical Engineering Major</h1>
+        <p>Explore all 27 required courses and their learning resources below.</p>
+        <input type="text" id="courseSearch" placeholder="Search for a course..." onkeyup="searchCourses()" />
+    </header>
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <button onclick="goBack()" class="back-button">← Back</button>
+    </div>
+    
+    <script>
+        function goBack() {
+            // If there's a previous page in the browser history
+            if (document.referrer) {
+                window.location.href = document.referrer; // Go back to the referring page
+            } else {
+                window.location.href = "index.html"; // Default to the homepage
+            }
+        }
+    </script>
+    <!-- Course Catalog -->
+    <main class="course-container">
+        <ul id="courseList">
+            <!-- Course 1 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course1')">Course 1: Math 1000 A & B  (Pre Calculus) (4 credits)</button>
+                <div id="course1" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLDesaqWTN6ESsmwELdrzhcGiRhk5DjwLP&si=25bWuGCf6Jrbc7Yc" target="_blank">Professor Leonard (English)</a>
+                    
+                </div>
+            </li>
+
+           
+            <!-- Course 2 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course2')">Course 2: Computer Programming for Engineers (4 credits)</button>
+                <div id="course2" class="dropdown-content">
+                    <a href="https://www.coursera.org/specializations/matlab-programming-engineers-scientists" target="_blank">MATLAB (Coursera)(English)</a>
+                    <a href="https://www.youtube.com/watch?v=-TkoO8Z07hI" target="_blank">C++ (Youtube)(English)</a>
+                </div>
+            </li>
+            <!-- Course 3 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course3')">Course 3: First-Year Writing Seminar (4 credits)</button>
+                <div id="course3" class="dropdown-content">
+                    <a href="https://www.edx.org/learn/professional-writing/the-university-of-queensland-academic-english-how-to-write-an-essay?index=product&queryId=4c84a2f8bfe5aa1187ff019bc076a82b&position=2" target="_blank">Essay Writing (edX)(English)</a>
+                    <a href="https://www.edx.org/learn/english/the-university-of-queensland-academic-english-how-to-write-a-thesis?index=product&queryId=4c84a2f8bfe5aa1187ff019bc076a82b&position=3" target="_blank">Thesis and Academic writing (edX)(English)</a>
+                 </div>
+            </li>
+            <!-- Course 4 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course4')">Course 4: Design & Innovation (J-Term) (2 credits)</button>
+                <div id="course4" class="dropdown-content">
+                    <a href="https://www.coursera.org/learn/fundamental-skills-in-engineering-design" target="_blank">Coursera (English)</a>
+                    <a href="https://ocw.mit.edu/courses/esd-051j-engineering-innovation-and-design-fall-2012/" target="_blank">MIT OpenCourseWare(English)</a>
+                 </div>
+            </li>
+            <!-- Course 5 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course5')">Course 5: Calculus with Applications to Science and Engineering</button>
+                <div id="course5" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLDesaqWTN6EQ2J4vgsN1HyBeRADEh4Cw-&si=ppNLdYatuzwKvk5S" target="_blank">Source 1 (Youtube)(English)</a>
+                    <a href="https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr&si=KcyoiZDy5YZwZj9W" target="_blank">Source 2 (Youtube)(English)</a>
+                 </div>
+            </li>
+            <!-- Course 6 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course6')">Course 6: Foundations of Science 1 & 2 (Physics, Biology, and Chemistry)(8 credits)</button>
+                <div id="course6" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLNycEeeRg4mWslgmYTqWgmO2e9eE9GAtl&si=APqIXhXDJKFQxiCc" target="_blank">Physics 1 (Youtube)(English)</a>
+                    <a href="https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/pages/syllabus/" target="_blank">Biology 1 (MIT OpenCourseWare)(English)</a>
+                    <a href="https://youtube.com/playlist?list=PLTGmFhsK1lNRegiswSI6MhKGHPy2J5Bl4&si=IHPrxsEi26v4FtjC" target="_blank">Chemistry 1 (Youtube)(English)</a>
+                 </div>
+            </li>
+            <!-- Course 7 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course7')">Course 7: Ethics in Engineering (1 credit)</button>
+                <div id="course7" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PL746AE3CCB29B64B8&si=wGU-0DwrGxRGLoZi" target="_blank">Illinois Foundry (Youtube)(English)</a>
+                    <a href="https://www.coursera.org/learn/ethics-in-engineering" target="_blank">Coursera (English)</a>
+                 </div>
+            </li>
+            <!-- Course 8 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course8')">Course 8: Multivariable Calculus (4 credits)</button>
+                <div id="course8" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLDesaqWTN6ESk16YRmzuJ8f6-rnuy0Ry7&si=PWKbG1abLNm9Hmwn" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+            <!-- Course 9 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course10')">Course 9: Linear Algebra (2 credits)</button>
+                <div id="course10" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&si=5yG_MYP_nNZuf_WP" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+            <!-- Course 10 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course10')">Course 10: Engineering Statics (2 credits)</button>
+                <div id="course10" class="dropdown-content">
+                    <a href="https://www.udemy.com/course/engineering-mechanics-statics/?srsltid=AfmBOooxFxk50yKkqkJerd-3BV2Tv_3w0zlCqXFJmXkb8YLa5GMrFgDA&couponCode=NEWYEARCAREER" target="_blank">Udemy (Paid Course)(English)</a>
+                    <a href="https://youtube.com/playlist?list=PLRqDfxcafc23LXGoItpkYMKtUdHaQwSDC&si=41Ntf7j7suDAazt1" target="_blank">Source 1 (Youtube)(English)</a>
+                    <a href="https://www.youtube.com/watch?v=Dqm9jD2dsC8&list=PLTGmFhsK1lNT6HSeaiBdDGS4bGKVWVokz" target="_blank">Source 2 (Youtube)(English)</a>
+                 </div>
+            </li>
+            <!-- Course 11 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course11')">Course 11: Digital Logic (2 credits)</button>
+                <div id="course11" class="dropdown-content">
+                    <a href="https://www.udemy.com/course/engineering-mechanics-statics/?srsltid=AfmBOooxFxk50yKkqkJerd-3BV2Tv_3w0zlCqXFJmXkb8YLa5GMrFgDA&couponCode=NEWYEARCAREER" target="_blank">Udemy (Paid Course)(English)</a>
+                    <a href="https://youtube.com/playlist?list=PLxCzCOWd7aiGmXg4NoX6R31AsC5LeCPHe&feature=shared" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+            <!-- Course 12 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course12')">Course 12: Circuits Fundamentals (2 credits)</button>
+                <div id="course12" class="dropdown-content">
+                    <a href="https://www.youtube.com/watch?v=TyyTefl9ktM&list=PLvJZZcg6Js7r8xKTR6lOI6eUmXEHDfGTH" target="_blank">Youtube (English)</a>
+                    <a href="https://www.edx.org/learn/circuits/massachusetts-institute-of-technology-circuits-and-electronics-1-basic-circuit-analysis" target="_blank">edX (English)</a>
+                 </div>
+            </li>
+            <!-- Course 13 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course13')">Course 13: Conservation Laws in Engineering (2 credits)</button>
+                <div id="course13" class="dropdown-content">
+                    <a href="https://youtu.be/a2mMA4M-V9M?si=t91xkFWmvdsrCIPn" target="_blank">Youtube (English)</a>
+
+                 </div>
+            </li>
+            <!-- Course 14 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course14')">Course 14: Differential Equations (4 credits)</button>
+                <div id="course14" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6&si=s1ag-5ld6o8Zs6-I" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+            <!-- Course 15 -->
+            <li class="course-item"></li>
+            <button class="dropdown-btn" onclick="toggleDropdown('course15')">Course 15: Advanced Digital Logic (2 credits)</button>
+            <div id="course15" class="dropdown-content">
+                <a href="https://www.coursera.org/learn/digital-systems" target="_blank">Coursera (English)</a>
+             </div>
+            </li>
+            <!-- Course 16 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course16')">Course 16: Complex Variables (2 credits)</button>
+                <div id="course16" class="dropdown-content">
+                    <a href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/" target="_blank">MIT OpenCourseWare (English)</a>
+                 </div>
+            </li>
+            <!-- Course 17 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course17')">Course 17: Advanced Circuits (2 credits)</button>
+                <div id="course17" class="dropdown-content">
+                    <a href="https://ocw.mit.edu/courses/6-331-advanced-circuit-techniques-spring-2002/" target="_blank">MIT OpenCourseWare (Advanced Circuit Techniques)(English)</a>
+                 </div>
+            </li>
+            <!-- Course 18 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course18')">Course 18: Discrete Math (4 credits)</button>
+                <div id="course18" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz&feature=shared" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+            <!-- Course 19 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course19')">Course 19: Electromagnetic Physics (4 credits)</button>
+                <div id="course19" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiOILaOC2hk6Pc3j&si=yVLGWOC3EaeuIlFx" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+            <!-- Course 20 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course20')">Course 20: Signals and Systems (4 credits)</button>
+                <div id="course20" class="dropdown-content">
+                    <a href="https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/" target="_blank">MIT OpenCourseWare (English)</a>
+                 </div>
+            </li>
+            <!-- Course 21 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course21')">Course 21: Probability and Statistics for Engineers (2 credits)</button>
+                <div id="course21" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLU6SqdYcYsfLRq3tu-g_hvkHDcorrtcBK&si=8zx9v-6lsqn_JETt" target="_blank">Youtube (English)</a>
+                    <a href="https://ocw.mit.edu/courses/1-151-probability-and-statistics-in-engineering-spring-2005/" target="_blank">MIT OpenCourseWare (English)</a>
+                 </div>
+            </li>
+            <!-- Course 22 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course22')">Course 22: Numerical Methods (2 credits)</button>
+                <div id="course22" class="dropdown-content">
+                    <a href="https://www.youtube.com/watch?v=8D0-mnKzLkk&list=PLLHqYFG9ZRRhriDPYCweP1ehIo4b7zeqc" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+            <!-- Course 23 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course23')">Course 23: Electronics (4 credits)</button>
+                <div id="course23" class="dropdown-content">
+                    <a href="https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/" target="_blank">MIT OpenCourseWare (English)</a>
+                 </div>
+            </li>
+            <!-- Course 24 -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course24')">Course 24: Electromagnetics (4 credits)</button>
+                <div id="course24" class="dropdown-content">
+                    <a href="https://ocw.mit.edu/courses/6-630-electromagnetics-fall-2006/" target="_blank">MIT OpenCourseWare (English)</a>
+                 </div>
+            </li>
+            <!-- Course 25  -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course25')">Course 25: Analog and Digital Communication (4 credits)</button>
+                <div id="course25" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLdnsORcN_8yi1iEPXagU0acwtChNQShFe&si=cAuxresgjF2tmPEB" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+            <!-- Course 26  -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course26')">Course 26: Instrumentation (4 credits)</button>
+                <div id="course26" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLhJQWRdDvATi97j2VmTYNA_iVf3h2P6fF&si=-WD757TwPmXBQLp2" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+            <!-- Course 27  -->
+            <li class="course-item">
+                <button class="dropdown-btn" onclick="toggleDropdown('course27')">Course 27: Controls (4 credits)</button>
+                <div id="course27" class="dropdown-content">
+                    <a href="https://youtube.com/playlist?list=PLUMWjy5jgHK3j74Z5Tq6Tso1fSfVWZC8L&si=uniwP4DCi4AxBmA4" target="_blank">Youtube (English)</a>
+                 </div>
+            </li>
+        </ul>
+    </main>
+
+    <!-- Script for Dropdowns and Search -->
+    <script>
+        // Function to toggle dropdown visibility
+        function toggleDropdown(courseId) {
+            const content = document.getElementById(courseId);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        // Function to search courses
+        function searchCourses() {
+            const input = document.getElementById("courseSearch").value.toLowerCase();
+            const courseItems = document.querySelectorAll(".course-item");
+
+            courseItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(input) ? "" : "none";
+            });
+        }
+    </script>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 NYUAD Engineering Course Compass. All rights reserved.</p>
+    </footer>
+</body>
+</html>

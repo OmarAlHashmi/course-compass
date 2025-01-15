@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NYUAD Engineering Course Compass</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/course_compass.png" alt="NYUAD Engineering Logo" class="logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Reach out to us using the details below.</p>
+    </header>
+<!-- Back Button -->
+<div class="back-button-container">
+    <button onclick="goBack()" class="back-button">← Back</button>
+</div>
+
+<script>
+    function goBack() {
+        // If there's a previous page in the browser history
+        if (document.referrer) {
+            window.location.href = document.referrer; // Go back to the referring page
+        } else {
+            window.location.href = "index.html"; // Default to the homepage
+        }
+    }
+</script>
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+        <h2>Get in Touch</h2>
+        <div class="contact-details">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p><a href="mailto:hello@nyuad.io">hello@nyuad.io</a></p>
+            </div>
+            <div class="contact-card">
+                <h3>Phone</h3>
+                <p><a href="tel:+1234567890">+97126284000</a></p>
+            </div>
+            <div class="contact-card">
+                <h3>Address</h3>
+                <p>Building A5, Room 015
+                    NYUAD Saadiyat Island Campus
+                    Abu Dhabi, United Arab Emirates<br>Saadiyat Island, Abu Dhabi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Form Section -->
+    <section class="feedback-form">
+        <h2>Submit Your Feedback or Proposals</h2>
+        <p>We value your input! Click the button below to submit your feedback or proposals via Google Forms.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdosplYj-kfy43iKaboN5R47npH_DGcO0eVlgtLUQZFFhPnGw/viewform" target="_blank" class="form-button">Submit Feedback</a>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="map-section">
+        <h2>Visit Us</h2>
+        <div class="map-container">
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29039.193345362935!2d54.4309248!3d24.523571200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e5d876232c3eb%3A0x14e8727ec5ee2be1!2sNew%20York%20University%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1736928402010!5m2!1sen!2sae" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 NYUAD Engineering Course Compass. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

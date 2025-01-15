@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NYUAD Engineering Course Compass</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/course_compass.png" alt="NYUAD Logo" class="logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="about-header">
+        <h1>About Us</h1>
+        <p>Your gateway to enhancing your academic journey at NYU Abu Dhabi.</p>
+    </header>
+<!-- Back Button -->
+<div class="back-button-container">
+    <button onclick="goBack()" class="back-button">← Back</button>
+</div>
+
+<script>
+    function goBack() {
+        // If there's a previous page in the browser history
+        if (document.referrer) {
+            window.location.href = document.referrer; // Go back to the referring page
+        } else {
+            window.location.href = "index.html"; // Default to the homepage
+        }
+    }
+</script>
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="about-text">
+            <h2>Welcome to NYUAD Engineering Course Compass</h2>
+            <p>
+                We are excited to introduce this platform, created by NYU Abu Dhabi students, to help college students around the world. 
+                This webpage serves as a one-stop hub for all college materials, offering resources to enhance your academic experience.
+                Whether you're exploring engineering concepts or pre-med requirements, we're here to support you in achieving your goals.
+            </p>
+        </div>
+
+        <div class="about-text">
+            <h2>Our Mission</h2>
+            <p>
+                At <strong>NYUAD Engineering Course Compass</strong>, we strive to make learning accessible and effective by providing tools 
+                tailored to diverse learning styles. Our goal is to guide students in navigating their curriculum and exploring concepts with ease. 
+                From foundational courses to advanced electives, our resources cater to every step of your academic journey.
+            </p>
+        </div>
+
+        <div class="about-text">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Curated course catalogs for Bioengineering, Computer Engineering, and Electrical Engineering.</li>
+                <li>Supplementary resources, including YouTube videos and online courses, for major-required courses.</li>
+                <li>Guidance on how to enhance your academic experience with independent study and regular practice.</li>
+            </ul>
+        </div>
+
+        <div class="about-text">
+            <h2>How to Use This Platform</h2>
+            <ol>
+                <li><strong>Primary Learning Sources:</strong> Attend lectures, participate in discussions, and review your notes for a comprehensive understanding.</li>
+                <li><strong>Supplementary Study:</strong> Use our resources to revisit topics, clarify challenging concepts, and prepare for exams.</li>
+            </ol>
+        </div>
+
+        <div class="about-text">
+            <h2>Contact Us</h2>
+            <p>
+                Have questions, suggestions, or topics you'd like us to include? We're here to help! 
+                Feel free to reach out to us through our <a href="contact.html">Contact Us</a> page. 
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 NYUAD Engineering Course Compass. All rights reserved.</p>
+    </footer>
+</body>
+</html>

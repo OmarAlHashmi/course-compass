@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioengineering at NYUAD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/nyuad-logo.png" alt="NYUAD Engineering Logo" class="logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="blog-header">
+        <h1>Bioengineering at NYUAD</h1>
+    </header>
+   <!-- Back Button -->
+   <div class="back-button-container">
+    <button onclick="goBack()" class="back-button">← Back</button>
+</div>
+
+<script>
+    function goBack() {
+        // If there's a previous page in the browser history
+        if (document.referrer) {
+            window.location.href = document.referrer; // Go back to the referring page
+        } else {
+            window.location.href = "index.html"; // Default to the homepage
+        }
+    }
+</script>
+    <!-- Blog Content -->
+    <main class="blog-content">
+        <p>
+            Bioengineering at NYU Abu Dhabi (NYUAD) is an interdisciplinary field that combines biology, engineering, and innovation to solve some of the most pressing global challenges. Students in this field work on cutting-edge projects that span tissue engineering, synthetic biology, and biotechnology. With a focus on integrating biology with engineering principles, the program aims to create solutions that impact healthcare, sustainability, and the environment.
+        </p>
+        <p>
+            The program emphasizes hands-on learning, allowing students to collaborate on innovative projects with world-class faculty. Whether it’s designing biomaterials, engineering artificial organs, or working on genetic therapies, bioengineering students at NYUAD are shaping the future of healthcare and technology. The program also offers numerous opportunities for research, internships, and international collaboration.
+        </p>
+        <p>
+            By blending rigorous academics with practical experiences, NYUAD ensures that students graduate with the skills and knowledge needed to lead in their fields. The state-of-the-art labs and research facilities further enhance the learning experience, providing students with access to the latest tools and technologies in the field of bioengineering.
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 NYUAD Engineering Course Compass. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

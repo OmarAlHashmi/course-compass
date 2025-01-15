@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - NYUAD Engineering Course Compass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/course_compass.png" alt="NYUAD Engineering Logo" class="logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="blog-header">
+        <h1>Our Blog</h1>
+        <p>Stay updated with the latest in engineering and technology.</p>
+    </header>
+<!-- Back Button -->
+<div class="back-button-container">
+    <button onclick="goBack()" class="back-button">← Back</button>
+</div>
+
+<script>
+    function goBack() {
+        // If there's a previous page in the browser history
+        if (document.referrer) {
+            window.location.href = document.referrer; // Go back to the referring page
+        } else {
+            window.location.href = "index.html"; // Default to the homepage
+        }
+    }
+</script>
+    <!-- Blog Section -->
+<section class="blog-section">
+    <div class="blog-container">
+        <!-- Blog Post 1 -->
+        <div class="blog-card">
+            <h3 onclick="toggleBlogPreview(this)">1. Peer-Tutoring</h3>
+            <div class="blog-preview">
+                <p>Peer tutoring provides personalized academic support, fostering collaboration and understanding between students...</p>
+                <a href="https://nyu.starfishsolutions.com/starfish-ops/instructor/serviceCatalog.html?tenantId=9311#/" target="_blank">Read More &gt;</a>
+            </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card">
+            <h3 onclick="toggleBlogPreview(this)">2. Welcome to NYUAD Engineering Course Compass</h3>
+            <div class="blog-preview">
+                <p>We are excited to introduce this platform, created by NYU Abu Dhabi students, to help college students around the...</p>
+                <a href="about.html" target="_blank">Read More &gt;</a>
+            </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card">
+            <h3 onclick="toggleBlogPreview(this)">3. Academic Advising</h3>
+            <div class="blog-preview">
+                <p>The Academic Resource Center (ARC) offers a range of services to support academic success...</p>
+                <a href="https://nyu.starfishsolutions.com/starfish-ops/instructor/serviceCatalog.html?r=j61mbf#/service/294707" target="_blank">Read More &gt;</a>
+            </div>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="blog-card">
+            <h3 onclick="toggleBlogPreview(this)">4. Bioengineering at NYUAD</h3>
+            <div class="blog-preview">
+                <p>Discover the fascinating world of Bioengineering at NYU Abu Dhabi, where innovation meets biology...</p>
+                <a href="bioengineering-blog.html" target="_blank">Read More &gt;</a>
+            </div>
+        </div>
+
+        <!-- Blog Post 5 -->
+        <div class="blog-card">
+            <h3 onclick="toggleBlogPreview(this)">5. Electrical Engineering at NYUAD</h3>
+            <div class="blog-preview">
+                <p>Dive into the world of circuits, power systems, and communication technologies with Electrical Engineering...</p>
+                <a href="electrical-engineering-blog.html" target="_blank">Read More &gt;</a>
+            </div>
+        </div>
+
+        <!-- Blog Post 6 -->
+        <div class="blog-card">
+            <h3 onclick="toggleBlogPreview(this)">6. Computer Engineering at NYUAD</h3>
+            <div class="blog-preview">
+                <p>Explore the intersection of hardware and software in Computer Engineering at NYU Abu Dhabi...</p>
+                <a href="computer-engineering-blog.html" target="_blank">Read More &gt;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script>
+        // Function to toggle dropdown for blog preview
+        function toggleBlogPreview(heading) {
+            const blogPreview = heading.nextElementSibling;
+
+            if (blogPreview.style.maxHeight) {
+                blogPreview.style.maxHeight = null; // Collapse
+            } else {
+                blogPreview.style.maxHeight = blogPreview.scrollHeight + "px"; // Expand
+            }
+        }
+    </script>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 NYUAD Engineering Course Compass. All rights reserved.</p>
+    </footer>
+</body>
+</html>
